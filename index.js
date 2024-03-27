@@ -53,7 +53,7 @@ async function run() {
     app.put("/courses/:id", async (req, res) => {
       const id = req.params.id;
       const filter = { _id: new ObjectId(id) };
-      const options = { upsert: treu };
+      const options = { upsert: true };
       const updateCourses = req.body;
       const courses = {
         $set: {
